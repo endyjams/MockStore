@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'package:mock_store/core/bindings.dart';
 import 'presentation/views/product_list_screen.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const MockStore());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MockStore extends StatelessWidget {
+  const MockStore({super.key});
 
   @override
   Widget build(BuildContext context) {
