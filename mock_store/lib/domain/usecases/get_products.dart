@@ -6,7 +6,7 @@ import 'package:mock_store/domain/entities/product.dart';
 class GetProducts {
   final ProductRepository repository;
 
-  GetProducts(this.repository);
+  GetProducts({required this.repository});
 
   Future<Either<Failure, List<Product>>> call() {
     return repository.getProducts();
