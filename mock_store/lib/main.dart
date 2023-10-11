@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mock_store/core/bindings.dart';
+import 'presentation/views/product_list_screen.dart';
 
-void main() => runApp(const MockStore());
+void main() => runApp(const MyApp());
 
-class MockStore extends StatelessWidget {
-  const MockStore({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       title: 'Mock Store',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      initialRoute: '/products',
+      getPages: [
+        GetPage(name: '/products', page: () => ProductListScreen()),
+      ],
+      initialBinding: AppBindings(),
     );
   }
 }
