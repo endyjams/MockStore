@@ -11,7 +11,6 @@ class ProductController extends GetxController {
   var isLoading = true.obs;
   var errorMessage = RxString('');
 
-
   @override
   void onInit() {
     super.onInit();
@@ -25,10 +24,10 @@ class ProductController extends GetxController {
       final result = await getProducts.call();
 
       result.fold(
-            (failure) {
+        (failure) {
           errorMessage.value = failure.toString();
         },
-            (productList) {
+        (productList) {
           products.value = productList;
         },
       );

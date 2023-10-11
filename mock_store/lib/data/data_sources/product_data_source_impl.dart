@@ -12,6 +12,7 @@ class ProductDataSourceImpl implements ProductDataSource {
   @override
   Future<List<ProductModel>> getProducts() async {
     final response = await dio.get(ApiEndpointsHelper.toRoute(APIEndpoints.getProducts));
+
     if (response.statusCode == 200) {
       return (response.data as List)
           .map((product) => ProductModel.fromJson(product))
