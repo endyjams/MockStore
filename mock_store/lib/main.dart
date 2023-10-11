@@ -13,11 +13,11 @@ class MockStore extends StatelessWidget {
     return GetMaterialApp(
       title: 'Mock Store',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
       ),
       initialRoute: '/products',
       getPages: [
-        GetPage(name: '/products', page: () => ProductListScreen()),
+        GetPage(name: '/products', page: () => const ProductListScreen()),
       ],
       initialBinding: AppBindings(),
     );
