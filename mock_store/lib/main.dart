@@ -36,7 +36,7 @@ class MockStore extends StatelessWidget {
           iconTheme: const IconThemeData(color: Colors.white),
         ),
         buttonTheme: ButtonThemeData(
-          buttonColor: Colors.red[800], // Define color here
+          buttonColor: Colors.red[800],
           textTheme: ButtonTextTheme.primary,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
