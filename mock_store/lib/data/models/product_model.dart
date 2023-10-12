@@ -23,12 +23,12 @@ class ProductModel extends Product {
     return ProductModel(
       id: json['id'],
       title: json['title'],
-      price: json['price'],
+      price: json['price'].toDouble(),
       description: json['description'],
       image: json['image'],
       category: json['category'],
       rating: Rating(
-        rate: json['rating']['rate'],
+        rate: json['rating']['rate'].toDouble(),
         count: json['rating']['count'],
       ),
     );
